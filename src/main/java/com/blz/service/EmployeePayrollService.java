@@ -13,17 +13,17 @@ public class EmployeePayrollService {
     /**
      * Creating arrayList of EmployeePayrollData type: employeePayrollList
      */
-    private List<EmployeePayroll> employeePayrollList = new ArrayList<>();
+     List<EmployeePayroll> employeePayrollList ;
 
     /**
      * Constructor
      */
-    public EmployeePayrollService() {
-        employeePayrollList = new ArrayList<>();
+    public EmployeePayrollService(List<EmployeePayroll> list) {
+       this. employeePayrollList = list;
     }
 
     public void writeToFile() {
-        String path = "C:\\Users\\SONY\\JAVA\\File_IO_Operations\\src\\main\\resources\\temp";
+        String path = "C:\\Users\\SONY\\JAVA\\EmployeePayroll\\src\\main\\resources\\temp";
         StringBuffer empDataBuffer = new StringBuffer();
         employeePayrollList.forEach(data -> {
             String dataString = data.toString().concat("\n");
@@ -39,13 +39,25 @@ public class EmployeePayrollService {
     }
 
     public void printData() {
-        String path = "C:\\Users\\SONY\\JAVA\\File_IO_Operations\\src\\main\\resources\\temp";
+        String path = "C:\\Users\\SONY\\JAVA\\EmployeePayroll\\src\\main\\resources\\temp";
         try {
             Files.lines(Paths.get(path)).forEach(System.out::println);
 
         } catch (IOException e) {
             System.out.println(e);
         }
+    }
+
+    public long countEntries() {
+        String path = "C:\\Users\\SONY\\JAVA\\EmployeePayroll\\src\\main\\resources\\temp";
+
+        try {
+            return Files.lines(Paths.get(path)).count();
+
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        return 0;
     }
 
 }

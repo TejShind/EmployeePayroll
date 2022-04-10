@@ -6,8 +6,8 @@ public class EmployeePayroll {
      * employeeId: ID of Employee. employeeName: Name of Employee. employeeSalary:
      * Salary of Employee.
      */
-    private int employeeId;
     private String employeeName;
+    private int employeeId;
     private double employeeSalary;
 
     /**
@@ -27,12 +27,15 @@ public class EmployeePayroll {
      * This method is Collecting the data From Employee
      */
 
+
     @Override
     public String toString() {
-        return "EmployeePayrollData [employeeId=" + employeeId + ", employeeName=" + employeeName + ", employeeSalary="
-                + employeeSalary + "]";
+        return "EmployeePayroll{" +
+                "employeeName='" + employeeName + '\'' +
+                ", employeeId=" + employeeId +
+                ", employeeSalary=" + employeeSalary +
+                '}';
     }
-
 }
 
 
