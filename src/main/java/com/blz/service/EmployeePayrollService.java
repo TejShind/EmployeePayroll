@@ -1,6 +1,6 @@
-package service;
+package com.blz.service;
 
-import model.EmployeePayroll;
+import com.blz.model.EmployeePayroll;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -56,5 +56,5 @@ public class EmployeePayrollService {
     private void writeEmployeePayrollData() {
         System.out.println("\nEmployee Payroll is\n" + employeePayrollList);
     }
-
 }
+

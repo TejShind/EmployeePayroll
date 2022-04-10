@@ -1,4 +1,4 @@
-package model;
+package com.blz.model;
 
 public class EmployeePayroll {
 
@@ -34,3 +34,5 @@ public class EmployeePayroll {
     }
 
 }
+
+
