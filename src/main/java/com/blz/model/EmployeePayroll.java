@@ -17,7 +17,7 @@ public class EmployeePayroll {
      * @param employeeName:   Name of Employee.
      * @param employeeSalary: Salary of Employee.
      */
-    public EmployeePayroll(int employeeId, String employeeName, double employeeSalary) {
+    public EmployeePayroll(String employeeName,int employeeId, double employeeSalary) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeSalary = employeeSalary;
